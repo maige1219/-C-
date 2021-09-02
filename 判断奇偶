@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <string.h>
+struct book
+{
+	char name[20];
+	int price;
+};
+int main() {
+	int a;
+	int b;
+	printf("请输入一个数字，让我来判断奇偶：");
+	scanf("%d", &a);
+	if (b = a % 2) {
+		printf("\n你这个数字它是个奇数奥！");
+
+	}
+	else {
+		printf("\n你这个数字它是个偶数奥！");
+
+	}
+	return 0;
+}
