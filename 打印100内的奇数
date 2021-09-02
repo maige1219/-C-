@@ -1,0 +1,8 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main() {
+	for (int a = 1; 101 > a; a = a + 2) {
+		printf("%d\n", a);
+	}
+	return 0;
+}
