@@ -7,7 +7,7 @@ int main() {
 			printf("%d   ", a);
 			c++; b++;
 		}
-		if ((c - 4) == 0) {
+		if (c == 4) {
 			printf("\n");
 			c = 0;
 		}
