@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main() {
+	int max, b, n;
+	int a[] = { 0 };
+	printf("这位客官，这次想比较几个数字呀？：");
+	scanf("%d", &b);
+	for (n = 0; n < b;n++) {
+		printf("这是第%d个数字：", (n + 1));
+		scanf("%d", &a[n]);
+	}
+		max = a[0];
+	for (n = 1; n < b; n++) {
+		if (a[n] >= max) {
+			max = a[n];
+		}
+
+	}
+	printf("\n\n最大的数是%d", max);
+	return 0;
+}
