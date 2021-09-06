@@ -1,0 +1,13 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main() {
+	int x, y;
+	float a;
+	printf("请输入两个整数。\n整数x：");
+	scanf("%d", &x);
+	printf("整数y：");
+	scanf("%d", &y);
+	a = (float) x / y * 100;
+	printf("x的值是y的%.0f%%", a);
+	return 0;
+}
