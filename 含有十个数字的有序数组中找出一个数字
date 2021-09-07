@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main() {
+	int a[10] = {1,2,3,4,5,6,7,8,9,10};
+	int sz = sizeof(a) / sizeof(a[0]);
+	int left=0, right=sz-1, mid,b;
+	printf("今天你想查那个数字呢？：");
+	scanf("%d", &b);
+	while (left <=right) {
+		mid = (left + right) / 2;
+		if (a[mid] < b) {
+			left = mid + 1;
+		}
+		else if (a[mid] > b)
+		{
+			right = mid - 1;
+		}
+		else if (a[mid]==b){
+			printf("\n嘿！你瞧我发现啥了！是你想找的数字的下标数是%d。",mid);
+			break;
+		}
+		
+	}
+	if (left > right)
+	{
+		printf("\n对不起我没找到  : (");
+	}
+	return 0;
+}
