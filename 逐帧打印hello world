@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <string.h>
+#include <Windows.h>
+
+int main() {
+	char a[20] = "hello world !!";
+	char b[20] = "##############";
+	int left = 0;
+	int right = strlen(a) - 1;
+	printf("%s\n", b);
+	Sleep(1000);
+	system("cls");
+	while (left <= right) {
+		b[left] = a[left];
+		b[right] = a[right];
+		printf("%s\n", b);
+		Sleep(1000);
+		if (left == 6) {
+			break;
+		}
+		system("cls");
+		left++;
+		right--;
+	}
+	
+	return 0;
+}
