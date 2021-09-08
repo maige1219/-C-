@@ -1,0 +1,45 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <string.h>
+#include <Windows.h>
+void swap(int x) {
+	int y;
+	for (y = 2; y <= x; y++) {
+		if (y == x)
+		{
+			printf("\n%d是一个素数", x);
+			break;
+		}
+		if (x % y == 0) {
+			printf("\n%d不是一个素数", x);
+			break;
+		}
+	}
+
+}
+void jisuan(int c) {
+	
+	printf("请输入你要检测数字：");
+	scanf("%d", &c);
+	swap(c);
+	
+}
+int main() {
+	int a[20] = { 0 };
+	int b = 0;
+	printf("欢迎使用麦格素数计算系统\n请输入登录密码：");
+	scanf("%s", &a);//记录密码
+	if (strcmp(a, "abc123") == 0) {//判断密码是否正确
+		Sleep(500);
+		system("cls");
+		printf("登陆成功！\n正在进入");
+		for (int i = 0; i <= 100; i += 20) {//假装加载
+			printf("》");
+			Sleep(1000);
+
+		}
+		system("cls");
+		jisuan(0);
+	}
+	return 0;
+}
