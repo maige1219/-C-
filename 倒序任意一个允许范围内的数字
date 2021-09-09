@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <Windows.h>
+#include <math.h>
+int main() {
+int a,c = 0,n,i,m,p;
+	int n1, n2, n3,num;
+	int b[20] = { 0 };
+	printf("来，输入你想倒序的数字：");
+	scanf("%d", &a);
+	Sleep(500);
+	printf("好，记住你输入的是\n%d", a);
+	n = a;
+	while (n) {
+		n = n / 10;
+		c++;
+	}
+	for (i = c-1,m = 0; i >= 0; i--)
+	{
+
+		p = pow(10, i);
+		b[m] = a / p % 10;
+		m++;
+
+	}
+	printf("\n");
+	m--;
+	while (m >= 0) {
+		printf("%d", b[m]);
+		m--;
+	}
+	return 0;
+}
