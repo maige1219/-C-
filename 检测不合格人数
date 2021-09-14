@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int fun(int score[], int m) {
+	int v_score=0,k=0;
+	int below[20] = { 0 };
+	for (int i = 0; i < m; i++)
+	{
+		v_score += score[i];
+	}
+	v_score /= m;
+	for (int i = 0; i < m; i++)
+	{
+		if (v_score > score[i]){
+			below[k] = score[i];
+			k++;
+		}
+	}
+		return k;
+}
+int main() {
+	int score[] = {52,80,90,70,30};
+	int m = sizeof(score) / sizeof(score[0]);
+	int n = fun(score, m);
+	printf("不合格的人数有%d个", n);
+	return 0;
+}
