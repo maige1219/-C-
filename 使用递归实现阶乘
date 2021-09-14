@@ -1,0 +1,18 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int fac(int n) {
+	if (n != 0)
+	{
+		return n * fac(n - 1);
+	}
+	return 1;
+}
+
+
+int main() {
+	int n;
+	scanf("%d", &n);
+	int num = fac(n);
+	printf("结果是%d", num);
+	return 0;
+}
