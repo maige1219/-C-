@@ -1,0 +1,16 @@
+#include <stdio.h>
+int jiecheng(int n){
+  if (n!=0)return n * jiecheng(n-1);
+  return 1;
+}
+int print(int n){
+  if(n==0)return 0;
+  return jiecheng(n) + print(--n);
+}
+int main(){
+  int n;
+  printf("请输入N:");
+  scanf("%d",&n);
+  printf("结果是%d",print(n));
+  return 0;
+}
